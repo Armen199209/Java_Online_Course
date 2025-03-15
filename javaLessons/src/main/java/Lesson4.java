@@ -178,9 +178,10 @@ public class Lesson4 {
 
 
         boolean resultTrue = true;
+        int countOfFors = 0;
         while (resultTrue) {
             resultTrue = false;
-            for (int i = 0; i < array10.length - 1; i++) {
+            for (int i = 0; i < array10.length - 1 - countOfFors; i++) {
                 if (array10[i] > array10[i + 1]) {
                     int z = array10[i];
                     array10[i] = array10[i + 1];
@@ -188,6 +189,7 @@ public class Lesson4 {
                     resultTrue = true;
                 }
             }
+            countOfFors++;
         }
         for (int a : array10) {
             System.out.print(a + " ");
